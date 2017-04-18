@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="com.restapi.model.Product" table="Product">
+      <meta attribute="class-description">
+         This class contains the Product details. 
+      </meta>
+      <id name="id" type="long" column="product_id">
+         <generator class="native"/>
+      </id>
+      <property name="productName" column="product_name" type="string"/>
+      <property name="price" column="price" type="double"/>
+      <property name="description" column="description" type="string"/>
+       <property name="imageURL" column="image" type="string"/>
+   </class>
+</hibernate-mapping>
